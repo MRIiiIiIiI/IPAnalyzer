@@ -12,9 +12,10 @@ pip install -r requirements.txt
 # How to Use
 
 run this code and enter ip and prefix 
+ُُُُُEx.
 
-Enter your IP address (e.g., 192.168.1.1): 192.168.1.1
-
-Enter your prefix (24-32): 22
-
-and wait.....!
+  Enter your IP address (e.g., 192.168.1.1): 192.168.1.1
+  
+  Enter your prefix (24-32): 22
+  
+  and wait.....!
