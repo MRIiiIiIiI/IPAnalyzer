@@ -13,7 +13,7 @@ pip install -r requirements.txt
 
 run this code and enter ip and prefix 
 
-ُُُُُEx.
+Ex.
 
   Enter your IP address (e.g., 192.168.1.1): 192.168.1.1
   
