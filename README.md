@@ -3,7 +3,7 @@
 This code defines a Python class called IPAnalyzer that is used to analyze and categorize IP addresses based on their class (A, B, or C) and some characteristics such as subnet mask, network ID, broadcast address, number of hosts, and network count. The user interacts with the program by inputting an IP address, and the class performs various calculations and displays information about that IP address.
 
 
-![7eb70b90-89de-4b31-ae3a-70fc07c2e7ff](https://github.com/MRIiiIiIiI/IPAnalyzer/assets/142177107/850b1731-c47d-48d0-a907-957fd52dd1ba)
+![ff93c31c-f0e8-4274-b870-401624e7bf7b](https://github.com/MRIiiIiIiI/IPAnalyzer/assets/142177107/370abdd5-f108-40a7-87ed-0984f69ad5bc)
 
 ## Installation
 To install the required dependencies, you can use the following command:
