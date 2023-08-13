@@ -32,8 +32,8 @@ class IPAnalyzer:
         network_id_decimal = '.'.join([str(int(part, 2)) for part in network_id_parts])
         broadcast_decimal = '.'.join([str(int(part, 2)) for part in broadcast_parts])
         # print Network ID and Broadcast Address
-        print(f"Network ID: {network_id_decimal}")
-        print(f"Broadcast Address: {broadcast_decimal}")
+        print(f" [+] Network ID: {network_id_decimal}")
+        print(f" [+] Broadcast Address: {broadcast_decimal}")
 
     def calculate_hosts_count(self,perfix):
         return 2 ** (32 - perfix) - 2
@@ -49,15 +49,15 @@ class IPAnalyzer:
             subnet_mask = self.calculate_subnet_mask(perfix_input)
             Hosts = self.calculate_hosts_count(perfix_input)
             Network = self.calculate_Network_count(perfix_input)
-            print(f"Subnet Mask of perfix: {subnet_mask}")
+            print(f" [+] Subnet Mask of perfix: {subnet_mask}")
         else:
             print("Prefix not found.")
-        print("Number of Network of this prefix:",Network)
-        print("Number of Hosts Per Network of this prefix:",Hosts)
+        print(" [+] Number of Network of this prefix:",Network)
+        print(" [+] Number of Hosts Per Network of this prefix:",Hosts)
 
         return perfix_input
     def right_perfix(self,perfix_input):
-        contiue = input("Notice this perfix not in the range do u want to continue or not (y/n)")
+        contiue = input(">> ?? Notice this prefix not in the range do u want to continue or not (y/n)")
         if contiue == 'y':
             self.INFO(perfix_input)
         elif contiue == 'n':
@@ -78,7 +78,7 @@ class IPAnalyzer:
             self.class_C()
 
     def class_A(self):
-        perfix_input = int(input("Enter your prefix (1-32): "))
+        perfix_input = int(input(">> Enter your prefix (1-32): "))
         if 1 <= perfix_input <= 32:
             print("Class A")
             self.INFO(perfix_input)
@@ -97,7 +97,7 @@ class IPAnalyzer:
             self.class_B()
 
     def class_B(self):
-        perfix_input = int(input("Enter your prefix (16-32): "))
+        perfix_input = int(input(">> Enter your prefix (16-32): "))
         if 16 <= perfix_input <= 32:
             print("Class B")
             self.INFO(perfix_input)
@@ -113,7 +113,7 @@ class IPAnalyzer:
             print("This IP is a public IP")
 
     def class_C(self):
-        perfix_input = int(input("Enter your prefix (24-32): "))
+        perfix_input = int(input(">> Enter your prefix (24-32): "))
         if 24<= perfix_input <=32:
             print("Class C")
             self.INFO(perfix_input)
@@ -146,11 +146,11 @@ def extract_ip(part_str):
 
 
 text = " MR.I"
-
+print('')
 print(text2art(text, font="speed"))
 
 
-user_input = input("Enter your IP address (e.g., 192.168.1.1): ")
+user_input = input(">> Enter your IP address (e.g., 192.168.1.1): ")
 ip = extract_ip(user_input)
 
 if ip is None:
