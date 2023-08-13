@@ -9,7 +9,7 @@ This code defines a Python class called IPAnalyzer that is used to analyze and c
 To install the required dependencies, you can use the following command:
 
 pip install -r requirements.txt
-#How to Use
+# How to Use
 
 run this code and enter ip and prefix 
 Enter your IP address (e.g., 192.168.1.1): 192.168.1.1
