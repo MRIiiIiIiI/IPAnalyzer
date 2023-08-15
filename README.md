@@ -32,12 +32,8 @@ The IP Analyzer classifies IP addresses into different classes (A, B, or C) base
 ## Usage Example
 
 ```python
-from art import text2art
-from analyzer import IPAnalyzer, extract_ip
 
-text = " MR.I"
-print('')
-print(text2art(text, font="speed"))
+from analyzer import IPAnalyzer, extract_ip
 
 user_input = input(">> Enter your IP address (e.g., 192.168.1.1): ")
 ip_parts = extract_ip(user_input)
