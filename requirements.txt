@@ -1,1 +1,2 @@
-art==5.2
+pip install art
+pip install time
