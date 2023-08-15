@@ -27,6 +27,7 @@ The IP Analyzer classifies IP addresses into different classes (A, B, or C) base
 
 - Python 3.x
 - The `art` library (used for ASCII art text)
+- the `time` library
 
 ## Usage Example
 
