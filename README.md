@@ -2,6 +2,9 @@
 
 The IP Analyzer is a Python script that allows you to analyze and provide information about an IP address, including its class, network ID, broadcast address, subnet mask, and more.
 
+
+![f91636f9-8721-436a-91da-c3d48543d4f9](https://github.com/MRIiiIiIiI/IPAnalyzer/assets/142177107/c7bddffc-6fe2-41fa-9ecd-6127a407c935)
+
 ## Description
 
 The IP Analyzer classifies IP addresses into different classes (A, B, or C) based on the first octet. It then provides detailed information about the IP address and its corresponding network, including network ID, broadcast address, subnet mask, number of networks, and number of hosts per network.
