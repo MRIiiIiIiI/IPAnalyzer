@@ -1,22 +1,48 @@
-# IPAnalyzer
+# IP Analyzer
 
-This code defines a Python class called IPAnalyzer that is used to analyze and categorize IP addresses based on their class (A, B, or C) and some characteristics such as subnet mask, network ID, broadcast address, number of hosts, and network count. The user interacts with the program by inputting an IP address, and the class performs various calculations and displays information about that IP address.
+The IP Analyzer is a Python script that allows you to analyze and provide information about an IP address, including its class, network ID, broadcast address, subnet mask, and more.
 
+## Description
 
-![ff93c31c-f0e8-4274-b870-401624e7bf7b](https://github.com/MRIiiIiIiI/IPAnalyzer/assets/142177107/370abdd5-f108-40a7-87ed-0984f69ad5bc)
+The IP Analyzer classifies IP addresses into different classes (A, B, or C) based on the first octet. It then provides detailed information about the IP address and its corresponding network, including network ID, broadcast address, subnet mask, number of networks, and number of hosts per network.
 
-## Installation
-To install the required dependencies, you can use the following command:
+## Features
 
-pip install -r requirements.txt
-# How to Use
+- Classifies IP addresses into classes (A, B, C)
+- Calculates network ID, broadcast address, and subnet mask
+- Determines if the IP address is public or private
+- Provides an option to explain the results
 
-run this code and enter ip and prefix 
+## Usage
 
-Ex.
+1. Clone or download the repository.
 
-  Enter your IP address (e.g., 192.168.1.1): 192.168.1.1
-  
-  Enter your prefix (24-32): 22
-  
-  and wait.....!
+2. Run the `analyzer.py` script. You will be prompted to enter an IP address (e.g., 192.168.1.1). The script will then analyze the IP address and provide relevant information.
+
+3. The script will display the IP address class and various details about the network associated with the IP address.
+
+4. You can choose to explain the results further, providing insights into the IP address's class, network ID, broadcast address, and subnet mask.
+
+## Dependencies
+
+- Python 3.x
+- The `art` library (used for ASCII art text)
+
+## Usage Example
+
+```python
+from art import text2art
+from analyzer import IPAnalyzer, extract_ip
+
+text = " MR.I"
+print('')
+print(text2art(text, font="speed"))
+
+user_input = input(">> Enter your IP address (e.g., 192.168.1.1): ")
+ip_parts = extract_ip(user_input)
+
+if ip_parts is None:
+    print("Invalid IP address format.")
+else:
+    ip_analyzer = IPAnalyzer(ip_parts)
+    ip_analyzer.analyze_ip()
