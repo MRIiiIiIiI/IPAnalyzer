@@ -15,6 +15,7 @@ The IP Analyzer classifies IP addresses into different classes (A, B, or C) base
 - Calculates network ID, broadcast address, and subnet mask
 - Determines if the IP address is public or private
 - Provides an option to explain the results
+- The Dividing class seems to be designed to handle the task of dividing IP address ranges into subgroups with specific numbers of hosts, and then analyzing and printing information about those subgroups.
 
 ## Usage
 
@@ -36,13 +37,19 @@ The IP Analyzer classifies IP addresses into different classes (A, B, or C) base
 
 ```python
 
-from analyzer import IPAnalyzer, extract_ip
+from analyzer import *
 
-user_input = input(">> Enter your IP address (e.g., 192.168.1.1): ")
-ip_parts = extract_ip(user_input)
+question = input("Do you want to know the IP address or make groups? ")
 
-if ip_parts is None:
-    print("Invalid IP address format.")
-else:
+if question.lower() == "know ip":
+    user_input = input(">> Enter your IP address (e.g., 192.168.1.1): ")
+    ip_parts = extract_ip(user_input)
+    if ip_parts is None:
+        print("Invalid IP address format.")
     ip_analyzer = IPAnalyzer(ip_parts)
     ip_analyzer.analyze_ip()
+elif question.lower() == "make groups":
+    dividing_instance = Dividing()
+    dividing_instance.run()
+else:
+    print("Invalid choice.")
