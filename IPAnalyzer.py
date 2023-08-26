@@ -231,9 +231,7 @@ print(text2art(text, font="speed"))
 class Dividing:
     def __init__(self):
         self.name = []
-        self.gg = []
         self.ip = None
-        self.num = 2
         self.prefix=31
 
     def info_group(self):
@@ -250,8 +248,10 @@ class Dividing:
         self.ip = self.ip_analyzer.classify_ip()
         Class = self.ip_analyzer.classify_ip()
         if Class == 'A':
+            self.info_group()
             self.found_prefix_A()
         elif Class == 'B':
+            self.info_group()
             self.found_prefix_B()
         elif Class == 'C':
             self.info_group()
@@ -261,7 +261,6 @@ class Dividing:
         def calculate_ip_parts(ip, n, offset):
             ip_parts = ip.split('.')
             ip_parts[-n] = str(int(ip_parts[-n]) + offset)
-            self.gg.append(ip_parts)
             return '.'.join(ip_parts)
 
         first_ip = self.ip_analyzer.calculate_network_id(subnet_bits)
@@ -270,18 +269,8 @@ class Dividing:
         self.new_ip1 = calculate_ip_parts(last_ip, n=1, offset=-1)
 
         new_ip = calculate_ip_parts(first_ip, n=1, offset=1)
-        #ip_addresses = []
         print(" [+] First IP address in", group_name, ":", new_ip)
         print(" [+] Last IP address in", group_name, ":", self.new_ip1)
-        # elif self.number_groups > 1:
-        #     n = new_ip
-        #     new_ip2 = calculate_ip_parts(last_ip, n=1, offset=-1)
-        #     for i in range(0, self.number_groups):
-        #         ip_addresses.append(n)
-        #         n = self.new_ip1
-        #     print(" [+] First IP address in", group_name, ":", ip_addresses)
-        #     print(" [+] Last IP address in", group_name, ":", new_ip2)
-        #
         print(" [+] Subnet mask is :", subnet_mask)
 
     def found_predix(self, min_bits, max_bits):
@@ -295,12 +284,10 @@ class Dividing:
             self.calculate_and_print_ip_range(prefix,group[0])
 
     def found_prefix_A(self):
-        self.info_group()
         self.found_predix(8,31)
 
 
     def found_prefix_B(self):
-        self.info_group()
         self.found_predix(17,31)
 
 
