@@ -4,7 +4,7 @@ The IP Analyzer is a Python script that allows you to analyze and provide inform
 
 
 
-![c8891dff-1061-49f7-bd66-8a51b0de3dcc](https://github.com/MRIiiIiIiI/IPAnalyzer/assets/142177107/6cefb500-f06e-42c1-99a6-b2e5dc4dba3b)
+![Uploading df906b45-7a83-4d4c-8a71-19b8fcc515de.jpg…]()
 
 
 ## Description
