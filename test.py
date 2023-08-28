@@ -1,4 +1,5 @@
-from analyzer import *
+
+from IPAnalyzer import *
 
 question = input("Do you want to know the IP address or make groups? ")
 
