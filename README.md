@@ -37,7 +37,7 @@ The IP Analyzer classifies IP addresses into different classes (A, B, or C) base
 
 ```python
 
-from analyzer import *
+from IPAnalyzer import *
 
 question = input("Do you want to know the IP address or make groups? ")
 
